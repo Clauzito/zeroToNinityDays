@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <section>
+        <h2> Enter in your Account! </h2>
+        <form> <!-- Para mandar o Formulario para back - Preciso usar a tag " action é o endereço para onde vai ser mandando."-->
+            <div class="user">
+                <label for="user">Insert your email: </label> <!--O for nesse caso pega a propriedade que eu dei no name, aqui então será o " name="user".-->
+                    <input type="text" name="user" id="user" placeholder="You email here" class="user-input">
+            </div>
+            <div class="password">
+                <label for="passaword">Insert your password: </label>
+                    <input type="password" name="password" required placeholder="Your password here" class="password-input">
+            </div>
+            <div class="submit">
+                <label for="submit">
+                <input type="submit" value="Submit" class="submit-input">
+                </label>
+            </div>
+        </form>
+    </section>
+    
+</main>
+<footer>
+    <p>&copy; 2026 - 90 coding with Claudecir Nunes.</p>
+</footer>
+</body>
+</html>
