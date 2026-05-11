@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scroll para links internos */
+html {
+    scroll-behavior: smooth;
+    /* Ajusta scroll automático para compensar header fixo */
+    scroll-margin-top: 40px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: antiquewhite;
+    background-image: url(./image/flahsyellow.jpg);
+    background-attachment: fixed;
+}
+
+/* ----------------------
+    HEADER e NAV
+------------------------*/
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    /* -----------------
+       Efeito Glass/Blur
+       -----------------*/
+    background: rgba(0, 0, 0, 0.247);
+    /* transparência */
+    backdrop-filter: blur(20px);
+    /* efeito blur */
+    -webkit-backdrop-filter: blur(20px);
+    /* Safari */
+
+    position: fixed;
+    /* fixa o header no topo enquanto você scrolla */
+    width: 100%;
+    /* ocupa toda a largura */
+    top: 0;
+    /* fixa no topo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: antiquewhite;
+    display: block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+h1:hover {
+    color: rgb(177, 160, 12);
+    transform: scale(1.1);
+}
+
+#home,
+#projects,
+#about,
+#contact {
+
+    min-height: 100vh;
+    /* ocupa toda altura da tela */
+}
+
+footer {
+    background: rgb(20, 20, 20);
+    /* fundo escuro */
+    color: antiquewhite;
+    /* texto claro */
+    text-align: center;
+    /* centraliza o texto */
+    padding: 20px;
+
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    /* linha fina separando do conteúdo */
+
+    /* - -   Tipografia e espaçamento  ---*/
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0;
+    transition: transform color 0.3s ease, color 0.3s ease;
+}
+
+footer:hover {
+    color: rgb(177, 160, 12);
+}
