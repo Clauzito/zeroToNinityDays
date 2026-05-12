@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background: linear-gradient(120deg,
+            #111111,
+            rgb(253, 207, 1),
+            #111111);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    /* -----------------
+       Efeito Glass/Blur
+       -----------------*/
+    background: rgba(202, 183, 12, 0.13);
+    /* transparência */
+    backdrop-filter: blur(20px);
+    /* efeito blur */
+    -webkit-backdrop-filter: blur(20px);
+    /* Safari */
+    z-index: 1000;
+
+    /* FIXAR NAVBAR NO TOPO*/
+    position: sticky;
+    /* DEIXA o header no topo enquanto você scrolla */
+    width: 100%;
+    /* ocupa toda a largura */
+    top: 0;
+    /* fixa no topo */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #111111;
+    display: block;
+    /* PARA OS LINKS TER O EFEITO SCALE */
+}
+
+#home,
+#projects,
+#about,
+#contact {
+    min-height: 100vh;
+    /* CADA SECTION TEM ALTURA TOTAL DA PAGE */
+    scroll-margin-top: 60px;
+}
+
+h1,
+nav a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1:hover,
+nav a:hover {
+    transform: scale(1.1);
+}
+
+#home {
+    display: flex;
+    border: 3px solid red;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border:  3px solid blue;
+}
+
+form {
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 20px;
+    border: 3px solid green;
+}
+.photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border: 3px solid yellow;
+}
+.home-photo {
+    height: 300px;
+    width: 300px;
+    border-radius: 30% 0 ;
+}
+.email-form {  /* Pega div do label e input " email " */
+    letter-spacing: 1px;
+}
