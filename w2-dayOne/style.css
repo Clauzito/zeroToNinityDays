@@ -98,3 +98,31 @@ footer {
 footer:hover {
     color: rgb(177, 160, 12);
 }
+
+/* -- RESPONSIVIDADE PARA TABLETS -- 
+   Usamos 768px como breakpoint comum para telas menores
+*/
+@media (max-width: 768px) {
+
+    header  { /* MUDA A DIREÇÃO DO FLEX PARA VERTICAL */ 
+        flex-direction: column;
+    }
+    nav ul { /* DEIXA OS LINKS DA NAVBAR NA VERTICAL*/ 
+        flex-direction: column;
+        gap: 10px; /* 10PX DE GAP PARA ESPAÇAMENTO ENTRE OS LINKS NA VERTICAL*/
+    }
+}
+
+/* RESPONSIVIDADE PARA MOBILE USAR 480PX 
+    USAMOS 480PX COMO BREAKPOINT COMUM PARA TELAS MENORES
+*/
+@media  (max-width: 480px) { 
+
+        header {
+            flex-direction: column;
+    }
+        nav ul {
+            flex-direction: column;
+            gap: 8px;
+        }    
+}

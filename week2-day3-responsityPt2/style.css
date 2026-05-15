@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background: linear-gradient(120deg,
+            #111111,
+            rgb(253, 207, 1),
+            #111111);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    color: aliceblue;
+
+
+    /* -----------------
+       Efeito Glass/Blur
+       -----------------*/
+    background: rgba(202, 183, 12, 0.13);
+    /* transparência */
+    backdrop-filter: blur(20px);
+    /* efeito blur */
+    -webkit-backdrop-filter: blur(20px);
+    /* Safari */
+    z-index: 1000;
+
+    /* FIXAR NAVBAR NO TOPO*/
+    position: sticky;
+    /* DEIXA o header no topo enquanto você scrolla */
+    width: 100%;
+    /* ocupa toda a largura */
+    top: 0;
+    /* fixa no topo */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    /* PARA OS LINKS TER O EFEITO SCALE */
+}
+
+#home,
+#projects,
+#about,
+#contact {
+    min-height: 100vh;
+    /* CADA SECTION TEM ALTURA TOTAL DA PAGE */
+    scroll-margin-top: 60px;
+}
+
+h1,
+nav a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1:hover,
+nav a:hover {
+    transform: scale(1.1);
+    color: rgb(0, 0, 0);
+}
+
+#home {
+    display: flex;
+
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+form {
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.home-photo {
+    height: 300px;
+    width: 300px;
+    border-radius: 30% 0;
+}
+
+.email-form,
+.password-form {
+    /* ESSA SAO DIVS PAIS DOS LABEL E INPUT */
+    letter-spacing: 1px;
+    display: flex;
+    /* USAR PARA DEIXAR OS FILHOS INPUT E LABEL FLEXIVEL */
+    flex-direction: column;
+    /* COM FLEX EM AÇÃO, O COLUMN ORGANIZA OS FILHOS UM ABAIXO DO OUTRO.*/
+
+}
+
+.email-label,
+.password-label {
+    text-align: center;
+    padding: 5px;
+}
+
+.email-bttn,
+.password-bttn {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 0 1px 10px black;
+    text-align: center;
+}
+
+.submit {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #111111b4;
+    color: antiquewhite;
+    transform: scale(1.1);
+}
+
+#projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.project-card {
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+#about {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+aside {
+    flex: 1;
+
+
+}
+
+details {
+    padding: 10px;
+}
+
+.about-main {
+    flex: 2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#contacts {
+    display: flex;
+    padding: 20px;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.linkdin,
+.github,
+.email,
+.contact {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+    transition: transform 0.3s ease;
+}
+
+section a {
+    text-decoration: none;
+    color: black;
+}
+
+.linkdin a:hover {
+    color: #111111;
+    transform: scale(1.1);
+    text-decoration: underline rgb(0, 153, 255);
+}
+
+.github a:hover {
+    color: #111111;
+    transform: scale(1.1);
+    text-decoration: underline rgb(255, 255, 255);
+}
+
+.email a:hover {
+    color: #111111;
+    transform: scale(1.1);
+    text-decoration: underline rgba(38, 0, 255);
+}
+
+.contact a:hover {
+    color: #111111;
+    transform: scale(1.1);
+    text-decoration: underline rgb(255, 196, 0);
+}
+
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column;
+    }
+
+    #projects {
+        flex-direction: column;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    #contacts {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:480px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #projects {
+        flex-direction: column;
+    }
+
+    #contacts {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+}
+
+footer {
+    font-size: 20px;
+    text-align: center;
+    padding: 50px;
+}
