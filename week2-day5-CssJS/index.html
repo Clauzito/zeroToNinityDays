@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero to Ninity Days</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            Welcome
+        </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Projects</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form id="my-form">
+                <h2> Answer the form!</h2>
+                <div class="cont-form">
+                    <label for="user">Name: </label>
+                    <input type="text" name="user" id="user" placeholder="Write your name here" required>
+                </div>
+                <div class="cont-form">
+                    <label for="email"> Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Write your email here" class="input-mail"
+                        required>
+                </div>
+                <div class="cont-form">
+                    <label for="phone">Phone: </label>
+                    <input type="tel" name="phone" id="phone" class="input-phone" pattern="[0-9]{9}"
+                        placeholder="Write your Phone Number here" required>
+                </div>
+                <div>
+                    <button type="submit" id="my-bttn" class="mybttn">
+                        SUBMIT
+                    </button>
+                </div>
+            </form>
+        </section>
+        <aside>
+            <div class="change-bttn">
+                <h3> Click to change the background color. </h3>
+                <button type="button" id="bttn-change" class="bttn-change">Click here</button>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p> &copy 2026 90 days coding </p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Usado para suavizar o hover*/
+    display: block;
+    /* Nesse caso usado para que o Hover Scale funcione*/
+}
+
+h1:hover,
+nav a:hover {
+    color: rgb(0, 140, 255);
+    transform: scale(1.1);
+}
+
+/* PAGE PRINCIPAL */
+main {
+
+    min-height: 100vh;
+    display: flex;
+    /* Esta sendo usado para section e aside fiquem lado a lado*/
+}
+
+/* -- PARTE ONDE ESTA O FORMULARIO*/
+section {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PARTE DO ASIDE */
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.change-bttn {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 200px;
+}
+
+.bttn-change {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    box-shadow: 0 0 5px rgb(0, 140, 255);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.bttn-change:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 140, 255, 0.623);
+}
+
+/* ESTILIZEI APENAS O QUADRADO DO FOMR PARA DEIXAR CENTRALIZADO */
+form {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* AQUI SÃO TODAS AS DIVS PARA SEREM ESTELIZADAS IGUAIS E APROVEITAR CODIGOS.*/
+.cont-form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1px;
+}
+
+/* PEGA TODOS OS INPUTS DA PAGINA - ATENÇÃO SE QUISER ALGUNS COLOCAR CLASSES ESPECIFICAS */
+input {
+    width: 250px;
+    border-radius: 10px;
+    height: 30px;
+    text-align: center;
+    box-shadow: 0 0 5px rgb(0, 140, 255);
+}
+
+/* NAO SEI SE E CERTO MAS USEI BUTTON NO FORM - APRENDI QUE USAVA INPUT SUBMIT ( VOU CORRIGIR, TALVEZ EU TROQUE PARA INPUT ) */
+.mybttn {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgb(0, 140, 255);
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* PARA DAR UM CHARME NO BTTN */
+.mybttn:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 140, 255, 0.623);
+}
+
+label {
+    padding: 5px;
+}
+
+footer {
+    text-align: center;
+    font-size: 22px;
+    padding: 20px;
+}
+
+@media (max-width:768px) {
+
+    main {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:480px) {
+    header {
+        flex-direction: column;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
