@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0a0a0f;
+    --surface: #13131a;
+    --border: #1e1e2e;
+    --accent: #00f5a0;
+    --accent2: #7c3aed;
+    --text: #f0f0f0;
+    --muted: #666680;
+    --card: #16161f;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* codigo abaixo: Para que o HERO nao fique abaixo da nav bar */
+    scroll-padding-top: 80px;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+
+}
+
+header {
+    padding: 1rem;
+    font-family: 'Syne', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(10, 10, 15, 0.8);
+    backdrop-filter: blur(12px);
+
+    /* Usado o codigo abaixo para fixar a navBar no top da page.*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-transform: uppercase;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--muted);
+    font-family: 'Syne', sans-serif;
+}
+
+.logo-txt {
+    color: var(--accent);
+    font-family: 'Space Mono', monospace, sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.logo-accent {
+    color: var(--muted);
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+main {
+    padding-top: 4.2rem;
+}
+
+footer {
+    font-family: 'Space Mono', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.home {
+    min-height: 100vh;
+    
+    display: flex;
+    align-items: center;
+}
+
+form {
+    height: 400px;
+    max-width: 400px;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 3;
+    min-height: 100vh;
+
+}
+
+.txt-form {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+label {
+    font-family: 'Syna', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 250px;
+    border-radius: 0.8em;
+    height: 1.5rem;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.btn-primary {
+    width: 150px;
+    height: 1.7rem;
+    border-radius: 0.8em;
+    color: var(--accent);
+    background-color: var(--bg);
+    border: 1px solid var(--accent);
+    cursor: pointer;
+    transition: transform 0.2s, color 0.3s;
+}
+
+.btn-primary:hover,
+.bttn-color:hover {
+    transform: scale(1.06);
+    box-shadow: 1px 1px 10px var(--accent);
+}
+
+aside {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.bttn-color {
+    width: 200px;
+    height: 2rem;
+    border: 1px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    border-radius: 0.8em;
+    font-family: 'Syna', sans-serif;
+    cursor: pointer;
+}
