@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    /* Altura do header no desktop */
+}
+
+:root {
+    --bg: #0a0a0f;
+    --surface: #13131a;
+    --border: #1e1e2e;
+    --accent: #00f5a0;
+    --accent2: #7c3aed;
+    --text: #f0f0f0;
+    --muted: #666680;
+    --card: #16161f;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    font-family: 'Syne', sans-serif;
+    backdrop-filter: blur(20px);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: var(--bg);
+    /* Para evitar transparência atrás */
+}
+
+.txt-logo {
+    font-family: 'Space Mono', sans-serif;
+    color: var(--accent);
+    font-weight: 400;
+}
+
+.linep {
+    color: var(--muted);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--muted);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+#hero {
+    min-height: 100vh;
+    display: flex;
+    padding: 8rem 3rem 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 2;
+}
+
+/* Hero tag */
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.dot-tag {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+}
+
+aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+    gap: 4px;
+}
+
+label {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+input {
+    width: 300px;
+    height: 1.5rem;
+    border-radius: 0.8em;
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    box-shadow: 1px 1px 5px var(--accent);
+}
+
+.bttn-form,
+.bttnchangeBg {
+    width: 200px;
+    height: 1.7rem;
+    border: 1px solid var(--accent);
+    background-color: transparent;
+    color: var(--accent);
+    border-radius: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.bttn-form:hover,
+.bttnchangeBg:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--accent);
+}
+
+#skills {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.colorbutton {
+    color: var(--accent);
+}
+
+.stacks-hero {
+    width: 100%;
+    padding: 3rem 3rem;
+}
+
+.retangSkills {
+    width: 200px;
+    height: 3rem;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: center;
+    letter-spacing: 0.1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.dots-skills {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent);
+    border-radius: 50%;
+}
+
+.retangSkills:hover {
+    border: 1px solid var(--accent);
+}
+
+.tittle-skills {
+    font-family: 'Space Mono', monospace, sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 3rem 0;
+}
+
+.sub-skills {
+    color: var(--muted);
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+
+.stack-Color {
+    color: var(--accent);
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+}
+
+/* ===== MEDIA QUERY ===== */
+@media (max-width:768px) {
+    html {
+        scroll-padding-top: 120px;
+        /* altura do header mobile */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #hero {
+        flex-direction: column;
+        padding: 10rem 1.5rem 4rem;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #skills {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
