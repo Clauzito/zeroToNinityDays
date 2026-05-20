@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg: #0b071e;       /* Roxo ultra escuro e sólido */
+    --text: #f4f3f7;     /* Branco suave para não cansar a vista */
+    --border: #1b153a;   /* Roxo intermediário para bordas e divisórias */
+    --accent: #00f0ff;   /* Ciano neon para botões e links de destaque */
+}
+body {
+    font-family: 'Syna', sans-serif;
+    font-size: 1.2rem;
+    background-color: var(--bg);
+    color: var(--text);
+}
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 1.2rem;
+}
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+nav a:hover {
+    color: var(--accent);
+}
+.aspas {
+    color: var(--accent);
+}
+#hero-cards {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+.card1, .card2, .card3 {
+    width: 400px;
+    height: 400px;
+    border: 1px solid var(--border);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Space Mono', monospace ,sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+.txt-bg {
+    text-align: center;
+    gap: 1rem;
+}
+.txtbg-color {
+    color: var(--accent);
+}
+.bttn-changeBg {
+    width: 200px;
+    height: 2rem;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid  var(--border);
+    color: var(--text);
+    letter-spacing: 0.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.bttn-changeBg:hover {
+    box-shadow: 1px 1px 10px var(--accent);
+}
+.dark {
+    background-color: black;
+    color: var(--accent);
+}
+
+@media (max-width:768px) {
+    #hero-cards {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+}
+@media (max-width:480px) {
+    header, nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
