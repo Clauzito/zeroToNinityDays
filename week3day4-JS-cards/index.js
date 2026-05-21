@@ -8,7 +8,7 @@ changeBg.addEventListener("click", function() { // "changeBg" é o NOME da const
     card1.classList.toggle("dark"); // "card1" nome da const que dei para receber uma classList com valor de toogle "dark"(que é encontrado em css com .dark { background color black, color white}) AQUI LIGA OU DESLIGA O MODO ESCURO
 });
 
-// AQUI VAI SER O CODIGO PARA LAMPADA ON/OFF
+// AQUI VAI SER O CODIGO PARA LAMPADA ON/OFF ------------------------------------------------------------------
 
 const turnOn = document.getElementById("turnOn"); // "turnOn" nome da const que recebe o valor do id "turnOn" que é o button para ligar a lampada
 const turnOff = document.getElementById("turnOff"); // "turnOff" nome da const que recebe o valor do id "turnOff" que é o button para desligar a lampada
@@ -22,7 +22,7 @@ turnOff.addEventListener("click", function () {
     lamp.src ="./image/desligada.png"; // "lamp" nome da const que recebe o valor do id "lamp" que é a imagem da lampada - "src" é a propriedade que troca a imagem - "./image/desligada.png" é o caminho da imagem que vai ser usada para desligar a lampada
 })
 
-// AQUI VAI SER O CODIGO PARA CALCULADORA DE IMC
+// AQUI VAI SER O CODIGO PARA CALCULADORA DE IMC -------------------------------------------------------
 
 // Primeiro passo é pegar os elementos do html e guardar em variaveis para usar no evento de click do button calcular.
 
