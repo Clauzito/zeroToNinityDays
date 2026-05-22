@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #3aede4;
+    --border: #334155;
+    --text: #f8fafc;
+    --accent: #06b6d4;
+    --bg: #0f172a;
+    --shadow: rgba(124, 58, 237, 0.25);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Syna', sans-serif;
+}
+
+/* AQUI É O HEADER */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--border);
+}
+
+/* AQUI MEXO NOS CONTAINER FILHOS LI - A */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+/* AQUI ESTILIZO AS " A " NO CASO LINKS*/
+nav a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* DEIXA AS ASPAS COM COR DIFERENTE*/
+.txt-span {
+    color: var(--accent);
+}
+h1 {
+    font-family: 'Space mono', monospace, sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* PARTE DA PAGINA PRINCIPAL */
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* parte dos cards*/
+.cards-container {
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    gap: 1rem;
+}
+
+/* PARTES DAS IMAGENS */
+img {
+    align-items: center;
+    height: 200px;
+    width: 200px;
+}
+
+/* AQUI É O TEXTO DO CARD 1*/
+.txt-bgColor {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+/* AQUI É O BUTTON DO CARD 1*/
+.bttn-primary {
+    width: 150px;
+    height: 2rem;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.bttn-primary:hover {
+    background-color: var(--accent);
+    color: var(--bg);
+    box-shadow: 1px 1px 10px var(--accent);
+}
+
+.dark-card1 {
+    background: black;
+}
+
+.card2 {
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* buttons On e Off da lampada*/
+.bttn-On,
+.bttn-Off {
+    width: 100px;
+    height: 1.5rem;
+    outline: none;
+    border: 1px solid var(--border);
+    background-color: transparent;
+    color: var(--text);
+    border-radius: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.bttn-On:hover,
+.bttn-Off:hover {
+    box-shadow: 1px 1px 10px var(--accent);
+}
+.pesos, .alturas, .calculos, .resultados{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    letter-spacing: 1px;
+}
+.imp {
+    width: 200px;
+    height: 2rem;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 0 3px var(--accent);
+}
+
+.bttn-calcular {
+    width: 150px;
+    height: 1.5rem;
+    outline: none;
+    text-transform: uppercase;
+    background-color: var(--accent);
+    border: 1px solid var(--border);
+    color: var(--border);
+    border-radius: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+footer {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+}
+.bttn-calcular:hover {
+    box-shadow: 1px 1px 20px var(--border);
+}
+@media (max-width:768px) {
+    header, nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    main, section, .container {
+        flex-direction: column;
+        gap: 10px ;
+    }
+}

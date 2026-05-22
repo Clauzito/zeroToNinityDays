@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>>Zero to Ninity Days</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div>On Click <span class="txt-span"> ( ) </span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1> learning Js ON CLick - DOM. </h1>
+            <div class="container">
+                <div class="cards-container" id="card1">
+                    <div class="txt-bgColor">
+                        Change the <span style="color: var(--accent);"> </br>background-color </br></span> on the
+                        button.
+                    </div>
+                    <button id="bttn-primary" class="bttn-primary">Click here</button>
+                </div>
+                <div class="cards-container card2">
+                    <div> Click on the </br><span style="color: var(--accent);">button</span> </br>to <span
+                            id="txtOn">Turn ON</span> the light.</div>
+                    <div class="img">
+                        <img src="./image/desligada.png" alt="" id="lampada">
+                    </div>
+                    <div class="bttns">
+
+                        <button id="turnOn" class="bttn-On">On</button>
+                        <button id="turnOff" class="bttn-Off">Off</button>
+                    </div>
+                </div>
+                <div class="cards-container">
+                    <h2>Calculator IMC </h2>
+                    <div class="pesos">
+                        <label for="pes-imc">Weight:</label>
+                        <input type="number" name="number" id="peso-imc" class="imp" placeholder="Put your Weight here">
+                    </div>
+                    <div class="alturas">
+                        <label for="alt-imc">Height:</label>
+                        <input type="number" name="number" id="altura-imc" class="imp" placeholder="Put your Height here">
+                    </div>
+                    <div class="calculos">
+                        <label for="calc-imc">Calcular</label>
+                        <button id="calcular-imc" class="calcular-imc bttn-calcular">Calcular</button>
+                    </div>
+                    <div class="resultados">
+                    <input type="area" name="area" id="resultado-imc" readonly class="imp" placeholder=" Your result will appear here">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2026 learning JavaScript.
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
