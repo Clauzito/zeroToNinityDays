@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero To Ninity days </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> 
+        <div class="txtweek">Week four day one <span style="color: var(--accent);"> ( ) </span></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div id="cards">
+                <div id="cardone" class="card card1">
+                    <div class="txtcardone">Click on the <span style="color: var(--accent);">Button</span> to change the background-color.</div>
+                    <button id="btnPrimary" class="bttnPrimary">Click Here</button>
+                </div>
+                <div class="card card2">
+                    <div>Click on the <span style="color: var(--accent);">Button</span> </br> to <span style="color: var(--accent);">TURN ON </span> and <span style="color: var(--accent);">TURN OFF</span> </br> the lamp. </div>
+                    <img src="./image/desligada.png" alt="photo lamp" id="lampada">
+                    <div class="bttnslamp">
+                        <button id="turnOn" class="bttns">Turn ON </button>
+                        <button id="turnOff" class="bttns"> Turn OFF</button>
+                    </div>
+                </div>
+                <div class="card card3">
+                  
+                        <p>Formulario <span style="color: var(--accent);"> IMC </span> :</p>
+
+                        <label for="">Peso:</label>
+                        <input type="text" class="bttnImc" id="peso">
+
+                        <label for="">Altura:</label>
+                        <input type="text" class="bttnImc" id="altura">
+
+                        <button id="bttnCalc" class="btncalcu">Calcular</button>
+
+                        <input id="resultado" readonly placeholder="Your result will appear here" class="bttnImc" id="resultado">
+                
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2026 - Cards with Js, 95% sozinho. apenas 2 olhadinha!
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
