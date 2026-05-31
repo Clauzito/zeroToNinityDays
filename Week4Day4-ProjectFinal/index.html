@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="txthead">Final Project <span class="corparente"> ( ) </span> </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div class="txtestagio">
+                <div class="dot-log"></div>
+                <div>Disponivel para estagio · 2026</div>
+            </div>
+            <div class="herotxt">
+
+                <h1>Claudecir Nunes</h1>
+                <p>Desenvolvedor frontend em formação, <span>aprendendo e colocando em pratica</span> tudo que venho
+                    aprendedo durante esse mes de Maio.</p>
+            </div>
+
+            <div class="ver-entre">
+                <button id="btnSkills">Ver Projetos</button>
+                <button id="btnContact">Entre em Contato</button>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="hero-cards">
+                <div id="changeColor" class="card1">
+                    <p>Change the background color click on the <span class="corparente">button</span>.</p>
+                    <button id="btnChangeColor" class="btnChangeColor">Change Color</button>
+                </div>
+                <div class="card2">
+                    <p>Click on the button to turn On and <span class="corparente">Turn On</span> <span
+                            class="corparente">turn Off </span> the lamp.</p>
+                    <img id="lamp" src="./image/desligada.png" alt="Lamp Off">
+
+                    <div class="btnLampContainer">
+                        <button id="btnLamp" class="btnLamp">Turn On</button>
+                        <button id="btnLampOff" class="btnLampOff">Turn Off</button>
+                    </div>
+                </div>
+                <div class="card3">
+                    <div class="calculatorImc">
+                        <label for="inputWeight">Weight:</label>
+                        <input type="number" id="inputWeight" placeholder="Write here your weight">
+                        <label for="inputHeight">Height:</label>
+                        <input type="number" id="inputHeight" placeholder="Write here your height">
+                        <button id="btnCalculate">Calculate</button>
+                        <input type="text" id="result" placeholder="Result" readonly>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+
+            <div class="about-cards">
+                <div class="about-card1">
+                    <h3>About Me</h3>
+
+                    <p>
+                        Hi, I'm Claudecir. I'm currently on a journey to become a Frontend Developer through
+                        consistent
+                        daily practice and project-based learning.
+                    </p>
+                </div>
+                <div class="about-card2">
+                    <h3>My Journey</h3>
+                    <p>
+                        This website is my final project after the first 30 days of a 90-day coding challenge.
+                        During this
+                        month, I focused on learning HTML, CSS, Responsive Design, JavaScript, and DOM manipulation
+                        while
+                        building projects and documenting my progress on GitHub.
+                    </p>
+                </div>
+                <div class="about-card3">
+                    <h3>My Goals</h3>
+                    <p>
+                        Even while working full-time, I dedicate time every day to studying and improving my skills.
+                        My goal
+                        is to keep learning, build real-world projects, and eventually start my professional career
+                        in web
+                        development.
+                    </p>
+                </div>
+                <div class="about-card4">
+                    <h3>My Philosophy</h3>
+                    <p>
+                        I believe that consistency is more important than perfection. Every day of coding adds
+                        experience,
+                        confidence, and new knowledge to the journey.
+                    </p>
+                </div>
+                <div class="about-card5">
+                    <h3>Skills Acquired</h3>
+
+                    <div class="about-tags">
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Responsive Design</li>
+                            <li>JavaScript</li>
+                            <li>DOM</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT -->
+        <section id="contact">
+
+            <form class="contactForm">
+                <h3>Contact Me.</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+            <aside class="social-links">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="https://github.com">
+                                <img src="./image/github-svgrepo-com.svg" alt="GitHub" class="github-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://linkedin.com">
+                                <img src="./image/linkedin-svgrepo-com.svg" alt="LinkedIn" class="linkedin-icon">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 - Final project. 30 days coding. </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
