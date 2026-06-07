@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #33ff00;
+    --secondary-color: #000000;
+    --button-color: #e0e0e0;
+    --button-hover-color: #a3a3a3;
+    --clear-button-color: #ff6666;
+    --clear-button-hover-color: #ff4d4d;
+    --equals-button-color: #4CAF50;
+    --equals-button-hover-color: #45a049;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(129deg,
+            var(--primary-color),
+            var(--secondary-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#calculator {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 30px hsl(0, 0%, 30%);
+    width: 300px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+#display {
+    width: 100%;
+    /* Utiliza a largura total do contêiner */
+    height: 50px;
+    margin-bottom: 20px;
+    /* Espaçamento inferior */
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    /* Espaçamento interno */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn,
+.clear,
+.equals {
+    height: 100%;
+    width: 60px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--button-color);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.divide,
+.multiply,
+.subtract,
+.add {
+    background-color: #ffcc00;
+    height: 60px;
+    width: 60px;
+    font-size: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: var(--button-hover-color);
+}
+
+.divide:hover,
+.multiply:hover,
+.subtract:hover,
+.add:hover {
+    background-color: #ffcc00;
+}
+
+#btnClear {
+    background-color: var(--clear-button-color);
+    color: white;
+}
+
+#btnClear:hover {
+    background-color: var(--clear-button-hover-color);
+}
+
+#btnEquals {
+    background-color: var(--equals-button-color);
+    color: white;
+}
+
+#btnEquals:hover {
+    background-color: var(--equals-button-hover-color);
+}
+
+.btn:active,
+.clear:active,
+.equals:active,
+.divide:active,
+.multiply:active,
+.subtract:active,
+.add:active {
+    transform: scale(0.95);
+}
