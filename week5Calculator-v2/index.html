@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator V2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <p class="logo">Calculator V2</p>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Skills</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Do your calculations.</h2>
+            <div id="calculator" class="calculator">
+                <input type="text" id="display" class="display" disabled>
+                <div id="buttons" class="buttons">
+                    <button class="btn" data-value="7">7</button>
+                    <button class="btn" data-value="8">8</button>
+                    <button class="btn" data-value="9">9</button>
+                    <button class="btn" data-value="/" id="dividir">/</button>
+                    <button class="btn" data-value="4">4</button>
+                    <button class="btn" data-value="5">5</button>
+                    <button class="btn" data-value="6">6</button>
+                    <button class="btn" data-value="*" id="multiplicar">*</button>
+                    <button class="btn" data-value="1">1</button>
+                    <button class="btn" data-value="2">2</button>
+                    <button class="btn" data-value="3">3</button>
+                    <button class="btn" data-value="-" id="subtrair">-</button>
+                    <button class="btn" data-value="0">0</button>
+                    <button class="btn" data-value="c" id="limpar">C</button>
+                    <button class="btn" data-value="=" id="igual">=</button>
+                    <button class="btn" data-value="+" id="somar">+</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Calculator V2. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

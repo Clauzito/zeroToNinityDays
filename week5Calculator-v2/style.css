@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #a8a8a8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: arial, sans-serif;
+    background: linear-gradient(135deg, #252629, #000000);
+    background-attachment: fixed;
+    color: var(--text-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+nav a:hover {
+    color: var(--primary-color) ;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+.calculator {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.display {
+    background-color: #222;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    text-align: right;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.btn {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: var(--primary-color);
+}
+.btn:active {
+    background-color: hsl(211, 100%, 75%);
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+#somar, #subtrair, #multiplicar, #dividir, #igual, #limpar {
+    background-color:   hsl(211, 100%, 35%);
+}
+#somar:hover, #subtrair:hover, #multiplicar:hover, #dividir:hover, #igual:hover, #limpar:hover {
+    background-color: hsl(211, 100%, 60%);
+}
