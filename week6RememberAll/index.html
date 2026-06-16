@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <p>Remenber <span class="parents">( ) </span></p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>
+                Hi, this project is for week 6,
+                and I will try to remember all the things I have learned in the past 5 weeks, and I will try to apply
+                them in this.
+            </h1>
+            <p>
+                I will try to make all projects in the past 5 weeks in this project, and I will try to make them all in
+                one project, and I will try to make them, without see any papers ou IA.
+            </p>
+        </section>
+        <section id="skills">skills
+            <div class="skills-container">
+                <div class="changeColorbg">
+                    <div id="changeBG" class="changeBg">
+                        <p>Change background color</p>
+                        <button id="changeColorBtn">Click HERE</button>
+                    </div>
+                </div>
+                <div id="lamp" class="lamps">
+                    <p>Turn on/off the lamp</p>
+                    <img id="lampada" src="./image/desligada.png">
+                    <div id="bttnOnOff">
+                        <button id="btnOnn" class="bttnOnn">ON</button>
+                        <button id="btnOff" class="bttnOff">OFF</button>
+                    </div>
+                </div>
+                <div id="Calculator-Imc" class="calculatImc">
+                    <p>Calculator IMC</p>
+                    <label for="weight">Weight in kg:</label>
+                    <input type="number" id="weight" placeholder="Weight in kg" class="inpt">
+                    <label for="height">Height in meters:</label>
+                    <input type="number" id="height" placeholder="Height in meters" class="inpt">
+                    <button id="calculateBtn" class="bttncalcImc">Calculate IMC</button>
+                    <label for="result">Result:</label>
+                    <input type="text" id="resultImc" readonly class="inpt">
+                </div>
+                <div id="Calculator" class="calculator">
+                    <div class="display">
+                        <input type="text" id="display" readonly class="displays">
+                    </div>
+                    <div class="buttons">
+                        <button class="btn" data-value="7">7</button>
+                        <button class="btn" data-value="8">8</button>
+                        <button class="btn" data-value="9">9</button>
+                        <button class="btn" data-value="/">/</button>
+                        <button class="btn" data-value="4">4</button>
+                        <button class="btn" data-value="5">5</button>
+                        <button class="btn" data-value="6">6</button>
+                        <button class="btn" data-value="*">*</button>
+                        <button class="btn" data-value="1">1</button>
+                        <button class="btn" data-value="2">2</button>
+                        <button class="btn" data-value="3">3</button>
+                        <button class="btn" data-value="-">-</button>
+                        <button class="btn" data-value="0">0</button>
+                        <button class="btn" data-value=".">.</button>
+                        <button class="btn" data-value="c">C</button>
+                        <button class="btn" data-value="+">+</button>
+                        <button class="btn" data-value="=">=</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about">about</section>
+        <section id="contact">contact</section>
+    </main>
+    <footer>
+        <p> &copy; relembrando tudo sobre a ultima semana.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
