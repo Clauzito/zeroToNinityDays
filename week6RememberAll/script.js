@@ -15,7 +15,7 @@ btnLigar.addEventListener('click', () => {
     lampada.src = "./image/ligada.png";
 });
 btnDesligar.addEventListener('click', () => {
-    lampada.src ="./image/desligada.png";
+    lampada.src = "./image/desligada.png";
 });
 
 // Lets calculator IMC. 
@@ -31,7 +31,12 @@ calcularImc.addEventListener('click', () => {
     const pesoValue = parseFloat(peso.value);
     const alturaValue = parseFloat(altura.value);
 
-    const IMC = peso.value / (altura.value * altura.value);
+    if (!pesoValue || !alturaValue) {
+        resultadoImc.value = "Invalid input";
+        return;
+    }
+
+    const IMC = pesoValue / (alturaValue * alturaValue);
     resultadoImc.value = IMC.toFixed(2);
 });
 
@@ -49,7 +54,7 @@ btns.forEach(button => {
                 display.value = eval(display.value);
             } catch (error) {
                 display.value = "Error";
-            } 
+            }
         } else {
             display.value += value;
         }

@@ -33,7 +33,9 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-primary);
-
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
 }
 
 .calculator,
@@ -118,7 +120,13 @@ nav a {
     align-items: center;
     text-align: center;
     height: 250px;
+    gap: 3rem;
+}
 
+.btnChangeColor {
+    width: 100px;
+    height: 1.8rem;
+    text-transform: uppercase;
 }
 
 .skills-container {
@@ -168,6 +176,7 @@ nav a {
     text-align: right;
     outline: none;
 }
+
 .displays {
     width: 100%;
     background: transparent;
@@ -177,6 +186,7 @@ nav a {
     text-align: right;
     outline: none;
 }
+
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -225,6 +235,55 @@ button {
 
 button:hover {
     background: var(--primary-dark);
+}
+
+#about {
+    display: flex;
+    gap: 3rem;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    text-align: center;
+    gap: 1rem;
+}
+
+.aside-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1.5rem;
+    color: #0284c7;
+    text-decoration: underline;
+}
+
+.about-meGradient {
+    font-size: 4rem;
+    background: linear-gradient(90deg, #000000, rgb(0, 233, 250));
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 5s linear infinite;
+    padding: 2rem;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
 }
 
 .dark {
