@@ -1,14 +1,25 @@
+/* =========================
+RESET E CONFIGURAÇÕES GLOBAIS
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* =========================
+SCROLL SUAVE
+========================= */
+
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4rem;
+    scroll-padding-top: 4.5rem;
 }
 
+/* =========================
+VARIÁVEIS DO TEMA
+========================= */
 
 :root {
     --bg-color: #0f172a;
@@ -28,15 +39,26 @@ html {
     --border-color: #475569;
 
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    --header-height: 64px;
 }
+
+/* =========================
+ESTILOS GERAIS
+========================= */
 
 body {
     background: var(--bg-color);
     color: var(--text-primary);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    overflow-x: hidden;
 }
+
+/* =========================
+CARDS REUTILIZÁVEIS
+========================= */
 
 .calculator,
 .calculatImc,
@@ -46,8 +68,8 @@ body {
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow);
     border-radius: 12px;
-    padding: 20px;
-    transition: 0.3s;
+    padding: 1.5rem;
+    transition: transform 0.3s;
     min-height: 250px;
 }
 
@@ -55,26 +77,34 @@ body {
 .lamps:hover,
 .calculatImc:hover,
 .calculator:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
+
+/* =========================
+HEADER E NAVEGAÇÃO
+========================= */
 
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border-color);
-    padding: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-
-    /* Posição fixa */
+    padding: 0 2rem;
+    height: var(--header-height);
     position: fixed;
     top: 0;
-    min-width: 100vw;
+    left: 0;
+    width: 100%;
     z-index: 1000;
-
-    /*Efeito blur*/
     backdrop-filter: blur(40px);
+    background: rgba(15, 23, 42, 0.85);
+}
+
+header p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 nav ul {
@@ -87,70 +117,150 @@ nav ul {
 nav a {
     text-decoration: none;
     color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--primary);
 }
 
 .parents {
     color: var(--primary);
 }
 
+/* Hamburger button — hidden on desktop || Novo cloud code que fez .. Vou aprender logo logo */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    line-height: 1;
+}
+
+.menu-toggle:hover {
+    background: transparent;
+    color: var(--primary);
+}
+
+/* =========================
+SECTION BASE
+========================= */
+
+section {
+    /* esse e novo ( cloud code ) */
+    padding-top: calc(var(--header-height) + 3rem);
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* =========================
+SEÇÃO HOME
+========================= */
+
 #home {
     min-height: 100vh;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
-    max-width: 900px;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    max-width: 860px;
     margin: 0 auto;
-    padding: 2rem;
 }
+
+#home h1 {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    line-height: 1.6;
+}
+
+#home p {
+    font-size: clamp(0.9rem, 2vw, 1.05rem);
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* =========================
+SEÇÃO SKILLS
+========================= */
 
 #skills {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1.5rem;
 }
 
+.section-title {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Grid responsivo dos cards */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    width: 100%;
+}
+
+/* Card mudar cor */
 .changeBg {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 250px;
-    gap: 3rem;
+    height: 100%;
+    min-height: 220px;
+    gap: 2rem;
 }
 
 .btnChangeColor {
-    width: 100px;
-    height: 1.8rem;
+    width: 120px;
+    height: 2rem;
     text-transform: uppercase;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-}
-
+/* Lâmpada */
 .lamps {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.lamps img {
+    max-height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+#bttnOnOff {
+    display: flex;
+    gap: 1rem;
 }
 
 .bttnOnn,
 .bttnOff {
-    width: 80px;
-    height: 35px;
-
+    width: 70px;
+    height: 36px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
+/* IMC */
 .calculatImc {
     display: flex;
     flex-direction: column;
@@ -158,23 +268,50 @@ nav a {
     justify-content: center;
     text-align: center;
     gap: 0.5rem;
-    padding: 1.2rem;
 }
 
+.inpt {
+    width: 100%;
+    max-width: 220px;
+    padding: 0.55rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background: var(--card-hover);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.result-imc {
+    font-weight: bold;
+    color: var(--primary);
+    text-align: center;
+}
+
+.bttncalcImc {
+    width: 120px;
+    height: 36px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* =========================
+CALCULADORA
+========================= */
+
 .calculator {
-    background-color: var(--card-color);
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .display {
-    background-color: var(--card-hover);
-    color: #fff;
-    font-size: 1.15rem;
-    padding: 1rem;
-    border-radius: 5px;
-    margin-bottom: 1.5rem;
+    background: var(--card-hover);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
     text-align: right;
-    outline: none;
 }
 
 .displays {
@@ -187,59 +324,53 @@ nav a {
     outline: none;
 }
 
+/* Layout padrão da calculadora — 4 colunas */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 8px;
 }
 
 .btn {
-    padding: 1rem;
-    font-size: 1.1rem;
+    padding: 0.85rem 0.5rem;
+    font-size: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    background-color: var(--border-color);
+    transition: background-color 0.15s ease, transform 0.1s;
+    background: var(--border-color);
+    user-select: none;
 }
 
 .btn:active {
-    background-color: hsl(200, 98%, 70%);
-}
-
-.inpt {
-    width: 200px;
-    padding: 0.6rem;
-    border-radius: 5px;
-}
-
-.bttncalcImc {
-    width: 100px;
-    height: 1.2rem;
-}
-
-#about {
-    min-height: 100vh;
-}
-
-#contact {
-    min-height: 100vh;
-}
-
-button {
     background: var(--primary);
-    color: white;
-    border: none;
+    transform: scale(0.95);
 }
 
-button:hover {
+.btn-clear {
+    background: var(--danger);
+}
+
+.btn-op {
     background: var(--primary-dark);
 }
 
+.btn-equals {
+    background: var(--success);
+    grid-column: span 2;
+    /* novo cloud que fez ( vou ver o por que )*/
+}
+
+/* =========================
+SEÇÃO ABOUT
+========================= */
+
 #about {
+    min-height: 100vh;
     display: flex;
     gap: 3rem;
+    align-items: center;
 }
 
 .about-container {
@@ -252,29 +383,147 @@ button:hover {
     gap: 1rem;
 }
 
+.about-container p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 520px;
+}
+
 .aside-about {
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
     padding: 1.5rem;
-    color: #0284c7;
-    text-decoration: underline;
+}
+
+aside ul {
+    list-style: none;
+}
+
+.color-sumary {
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.3rem 0;
+}
+
+.list-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 1rem 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
 }
 
 .about-meGradient {
-    font-size: 4rem;
+    font-size: clamp(2rem, 8vw, 4rem);
+    /* ainda não sei, mas vou saber */
     background: linear-gradient(90deg, #000000, rgb(0, 233, 250));
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradient 5s linear infinite;
-    padding: 2rem;
+    padding: 1rem 2rem;
 }
+
+/* =========================
+SEÇÃO CONTACT
+========================= */
+
+#contact {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-form,
+.contact-info {
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.contact-form {
+    flex: 2;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--card-hover);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    width: 100%;
+    font-family: inherit;
+    resize: vertical;
+    /* não sei para que serve, vou descobrir */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid var(--primary);
+    border-color: transparent;
+}
+
+.contact-form button {
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* =========================
+BOTÕES GLOBAIS
+========================= */
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+/* =========================
+DARK CLASS (JS toggle)
+========================= */
+
+.dark {
+    background-color: #000000;
+    color: #fff;
+}
+
+/* =========================
+ANIMAÇÕES
+========================= */
 
 @keyframes gradient {
     0% {
@@ -286,13 +535,178 @@ button:hover {
     }
 }
 
-.dark {
-    background-color: #000000;
-    color: #fff;
-}
+/* =========================
+FOOTER
+========================= */
 
 footer {
     border-top: 1px solid var(--border-color);
-    padding: 1.2rem;
+    padding: 1.2rem 2rem;
     text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* =========================
+RESPONSIVIDADE
+========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    #about {
+        gap: 2rem;
+    }
+}
+
+/* Tablets menores e mobile */
+@media (max-width: 768px) {
+
+    :root {
+        --header-height: 56px;
+    }
+
+    html {
+        scroll-padding-top: calc(var(--header-height) + 1rem);
+    }
+
+    /* HEADER */
+    header {
+        padding: 0 1.25rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    /* Hamburger visível */
+    .menu-toggle {
+        display: block;
+        /* porque usar o display block ? ( cloud code que fez )*/
+    }
+
+    /* Nav mobile: dropdown */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: fixed;
+        top: var(--header-height);
+        /* preciso aprender cloud code que fez.*/
+        left: 0;
+        width: 100%;
+        background: rgba(15, 23, 42, 0.97);
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem 0;
+        z-index: 999;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        /* Pq usar o block ? */
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    nav ul li:last-child a {
+        /* Last -child a ? ultimo filho seria a estelização ? */
+        border-bottom: none;
+    }
+
+    /* SECTIONS */
+    section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: calc(var(--header-height) + 2.5rem);
+        padding-bottom: 3rem;
+    }
+
+    /* SKILLS */
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .inpt {
+        max-width: 100%;
+    }
+
+    .bttncalcImc {
+        width: 100%;
+        max-width: 200px;
+        height: 40px;
+    }
+
+    /* ABOUT */
+    #about {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-container,
+    .aside-about {
+        width: 100%;
+    }
+
+    /* CONTACT */
+    #contact {
+        flex-direction: column;
+        align-items: stretch;
+        /* stretch, já vi algo mas nao lembro*/
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 100%;
+        min-width: unset;
+        /* Unset ? para que serve? */
+    }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+    header p {
+        font-size: 0.95rem;
+    }
+
+    .about-meGradient {
+        font-size: 2rem;
+        padding: 0.75rem;
+    }
+
+    .btn {
+        padding: 0.7rem 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    .displays {
+        font-size: 1.2rem;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 1.25rem;
+    }
+}
+
+/* Acessibilidade: reduz animações - ( ainda preciso aprender sobre isso)  */
+@media (prefers-reduced-motion: reduce) {
+    .about-meGradient {
+        animation: none;
+    }
+
+    .changeColorbg:hover,
+    .lamps:hover,
+    .calculatImc:hover,
+    .calculator:hover {
+        transform: none;
+    }
 }

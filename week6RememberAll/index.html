@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
+    <title>Remember ( )</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <p>Remenber <span class="parents">( ) </span></p>
+        <p>Remember <span class="parents">( ) </span></p>
         <nav>
-            <ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+            <ul id="navMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#about">About</a></li>
@@ -20,6 +21,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section id="home">
             <h1>
@@ -29,92 +31,122 @@
             </h1>
             <p>
                 I will try to make all projects in the past 5 weeks in this project, and I will try to make them all in
-                one project, and I will try to make them, without see any papers ou IA.
+                one project, and I will try to make them, without looking at any papers or AI.
             </p>
         </section>
-        <section id="skills">skills
+
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
             <div class="skills-container">
+
                 <div class="changeColorbg">
                     <div id="changeBG" class="changeBg">
                         <p>Change background color</p>
                         <button id="changeColorBtn" class="btnChangeColor">Click HERE</button>
                     </div>
                 </div>
+
                 <div id="lamp" class="lamps">
                     <p>Turn on/off the lamp</p>
-                    <img id="lampada" src="./image/desligada.png">
+                    <img id="lampada" src="./image/desligada.png" alt="Lamp">
                     <div id="bttnOnOff">
                         <button id="btnOnn" class="bttnOnn">ON</button>
                         <button id="btnOff" class="bttnOff">OFF</button>
                     </div>
                 </div>
+
                 <div id="Calculator-Imc" class="calculatImc">
                     <p>Calculator IMC</p>
-                    <label for="weight">Weight in kg:</label>
-                    <input type="number" id="weight" placeholder="Weight in kg" class="inpt">
-                    <label for="height">Height in meters:</label>
-                    <input type="number" id="height" placeholder="Height in meters" class="inpt">
-                    <button id="calculateBtn" class="bttncalcImc">Calculate IMC</button>
-                    <label for="result">Result:</label>
-                    <input type="text" id="resultImc" readonly class="inpt">
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" placeholder="e.g. 70" class="inpt" min="1" max="500">
+                    <label for="height">Height (m):</label>
+                    <input type="number" id="height" placeholder="e.g. 1.75" class="inpt" min="0.5" max="3" step="0.01">
+                    <button id="calculateBtn" class="bttncalcImc">Calculate</button>
+                    <label for="resultImc">Result:</label>
+                    <input type="text" id="resultImc" readonly class="inpt result-imc">
                 </div>
+
                 <div id="Calculator" class="calculator">
                     <div class="display">
-                        <input type="text" id="display" readonly class="displays">
+                        <input type="text" id="display" readonly class="displays" placeholder="0">
                     </div>
                     <div class="buttons">
+                        <button class="btn btn-clear" data-value="c">C</button>
+                        <button class="btn btn-op" data-value="/">/</button>
+                        <button class="btn btn-op" data-value="*">×</button>
+                        <button class="btn btn-op" data-value="-">−</button>
                         <button class="btn" data-value="7">7</button>
                         <button class="btn" data-value="8">8</button>
                         <button class="btn" data-value="9">9</button>
-                        <button class="btn" data-value="/">/</button>
+                        <button class="btn btn-op btn-plus" data-value="+">+</button>
                         <button class="btn" data-value="4">4</button>
                         <button class="btn" data-value="5">5</button>
                         <button class="btn" data-value="6">6</button>
-                        <button class="btn" data-value="*">*</button>
+                        <button class="btn btn-zero" data-value="0">0</button>
                         <button class="btn" data-value="1">1</button>
                         <button class="btn" data-value="2">2</button>
                         <button class="btn" data-value="3">3</button>
-                        <button class="btn" data-value="-">-</button>
-                        <button class="btn" data-value="0">0</button>
-                        <button class="btn" data-value=".">.</button>
-                        <button class="btn" data-value="c">C</button>
-                        <button class="btn" data-value="+">+</button>
-                        <button class="btn" data-value="=">=</button>
+                        <button class="btn btn-dot" data-value=".">.</button>
+                        <button class="btn btn-equals" data-value="=">=</button>
                     </div>
                 </div>
+
             </div>
         </section>
+
         <section id="about">
             <div class="about-container">
-                <h1 class="about-meGradient"> About me.</h1>
+                <h1 class="about-meGradient">About me.</h1>
                 <p>
                     I'm a beginner front-end developer passionate about learning and building projects.
-
                     In just over a month of studying, I've been focusing on HTML, CSS, and JavaScript, learning how to
-                    create responsive layouts, interactive interfaces, and dynamic web applications.</p>
-
+                    create responsive layouts, interactive interfaces, and dynamic web applications.
+                </p>
             </div>
             <aside class="aside-about">
-                <details>
-                    <summary>Skills I learned</summary>
-                    <ul>
+                <details open>
+                    <summary class="color-sumary">Skills I learned</summary>
+                    <ul class="list-details">
                         <li>HTML5</li>
                         <li>CSS3</li>
-                        <li>FLEXBOX</li>
-                        <li>CSS GRID</li>
-                        <li>RESPONSIVE DESIGN</li>
-                        <li>DOM MANIPULATION</li>
-                        <li>JAVASCRIPT: VARIAVEIS, OPERADORES,DOM, CONDICIONAIS</li>
-                        <li> GIT & GITHUB</li>
+                        <li>Flexbox</li>
+                        <li>CSS Grid</li>
+                        <li>Responsive Design</li>
+                        <li>DOM Manipulation</li>
+                        <li>JavaScript: Variables, Operators, DOM, Conditionals</li>
+                        <li>Git & GitHub</li>
                     </ul>
                 </details>
             </aside>
         </section>
-        <section id="contact">contact</section>
+
+        <section id="contact">
+            <div class="contact-form">
+                <h2>Contact Me</h2>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your name">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your email">
+                <label for="message">Message</label>
+                <textarea id="message" rows="6" placeholder="Write your message here..."></textarea>
+                <button type="button">Send Message</button>
+            </div>
+
+            <aside class="contact-info">
+                <h2>Find Me</h2>
+                <p>📧 email@email.com</p>
+                <p>💻 GitHub</p>
+                <p>💼 LinkedIn</p>
+                <p>📷 Instagram</p>
+                <small>Feel free to contact me through any platform.</small>
+            </aside>
+        </section>
     </main>
+
     <footer>
-        <p> &copy; relembrando tudo sobre a ultima semana.</p>
+        <p>&copy; Remembering everything from the last week.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 
